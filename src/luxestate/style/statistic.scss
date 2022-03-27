@@ -9,7 +9,7 @@ section .statisctic {
     color: $font-color;
     max-width: 1920px;
     position: relative;
-
+   
 }
 
 section .statistic--left {
@@ -53,7 +53,7 @@ section .statistc--right--cube1 {
     height: 200px;
     background-color: #f6f5f4;
     position: absolute;
-    right: 643px;
+    left: 1065px;
     top: 868px;
 
     h2 {
@@ -82,7 +82,7 @@ section .statistc--right--cube2 {
     height: 200px;
     background-color: #f6f5f4;
     position: absolute;
-    right: 413px;
+    left: 1301px;
     top: 868px;
 
     h2 {
@@ -110,7 +110,7 @@ section .statistc--right--cube3 {
     height: 200px;
     background-color: #f6f5f4;
     position: absolute;
-    right: 643px;
+    left: 1065px;
     top: 1098px;
 
     h2 {
@@ -138,7 +138,7 @@ section .statistc--right--cube4 {
     height: 200px;
     background-color: #f6f5f4;
     position: absolute;
-    right: 413px;
+    left: 1301px;
     top: 1098px;
 
     h2 {
