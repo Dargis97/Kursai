@@ -1,0 +1,12 @@
+$font: 'Montserrat',
+sans-serif;
+
+$font-color: #1f373d;
+
+
+@mixin display {
+    display: flex;
+    max-width: 1920px;
+    padding-left: 400px;
+    padding-top: 26px;
+}

@@ -1,2 +1,9 @@
 **/SASS/*.css
 **/SASS/*.map
+*.psd
+
+**/luxestate/style/*.css
+**/luxestate/style/*.map
+
+**/luxestate/mixins/*.css
+**/luxestate/mixins/*.map
