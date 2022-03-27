@@ -1,0 +1,162 @@
+$font: 'Montserrat',
+sans-serif;
+
+$font-color: #1f373d;
+
+
+section .statisctic {
+    $font: $font;
+    color: $font-color;
+    max-width: 1920px;
+    position: relative;
+
+}
+
+section .statistic--left {
+    h2 {
+        font-size: 40px;
+        letter-spacing: -1px;
+        font-weight: 600;
+        line-height: 50px;
+        margin-top: 816px;
+        margin-left: 408px;
+        max-width: 15%;
+        margin-bottom: 71px;
+    }
+
+}
+
+section .statistic--left {
+    p {
+        width: 540px;
+        height: 226px;
+        font-size: 13px;
+        letter-spacing: 0px;
+        line-height: 30px;
+        color: #1f373d;
+        font-weight: 400;
+        font-family: $font;
+        margin-left: 403px;
+    }
+}
+
+
+section .statistic--right {
+    font-family: $font;
+    margin-right: 413px;
+
+
+}
+
+section .statistc--right--cube1 {
+    width: 200px;
+    height: 200px;
+    background-color: #f6f5f4;
+    position: absolute;
+    right: 643px;
+    top: 868px;
+
+    h2 {
+        font-size: 40px;
+        letter-spacing: -1px;
+        line-height: 50px;
+        color: #ffcc01;
+        font-weight: 600;
+        margin-top: 68px;
+        padding-left: 68px;
+
+    }
+
+    h3 {
+        font-size: 14px;
+        letter-spacing: 0px;
+        line-height: 50px;
+        color: #1f373d;
+        font-weight: 600;
+        padding-left: 57px;
+    }
+}
+
+section .statistc--right--cube2 {
+    width: 200px;
+    height: 200px;
+    background-color: #f6f5f4;
+    position: absolute;
+    right: 413px;
+    top: 868px;
+
+    h2 {
+        font-size: 40px;
+        letter-spacing: -1px;
+        line-height: 50px;
+        color: #ffcc01;
+        font-weight: 600;
+        margin-top: 68px;
+        padding-left: 58px;
+    }
+
+    h3 {
+        font-size: 14px;
+        letter-spacing: 0px;
+        line-height: 50px;
+        color: #1f373d;
+        font-weight: 600;
+        padding-left: 80px;
+    }
+}
+
+section .statistc--right--cube3 {
+    width: 200px;
+    height: 200px;
+    background-color: #f6f5f4;
+    position: absolute;
+    right: 643px;
+    top: 1098px;
+
+    h2 {
+        font-size: 40px;
+        letter-spacing: -1px;
+        line-height: 50px;
+        color: #ffcc01;
+        font-weight: 600;
+        margin-top: 68px;
+        padding-left: 77px;
+    }
+
+    h3 {
+        font-size: 14px;
+        letter-spacing: 0px;
+        line-height: 50px;
+        color: #1f373d;
+        font-weight: 600;
+        padding-left: 65px;
+    }
+}
+
+section .statistc--right--cube4 {
+    width: 200px;
+    height: 200px;
+    background-color: #f6f5f4;
+    position: absolute;
+    right: 413px;
+    top: 1098px;
+
+    h2 {
+        font-size: 40px;
+        letter-spacing: -1px;
+        line-height: 50px;
+        color: #ffcc01;
+        font-weight: 600;
+        margin-top: 68px;
+        padding-left: 81px;
+    }
+
+    h3 {
+        font-size: 14px;
+        letter-spacing: 0px;
+        line-height: 50px;
+        color: #1f373d;
+        font-weight: 600;
+        padding-left: 77px;
+    }
+}
