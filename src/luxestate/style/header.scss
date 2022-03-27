@@ -41,15 +41,20 @@ header .header--middle--nav {
 
 }
 
-.header--middle nav a {
-    margin: 17px;
+.header--middle {
+    nav a {
+        margin: 17px;
+    }
 
-    
+
 }
 
-header .header--middle nav a:last-of-type {
-    margin-left: 83px;
-    margin-right: 22px;
+header .header--middle {
+    nav a:last-of-type {
+        margin-left: 83px;
+        margin-right: 22px;
+    }
+
 }
 
 header .header--right {
@@ -64,10 +69,9 @@ header .header--right {
     text-align: center;
     align-items: center;
 
-   
+
 }
 
 header .header--right--nav {
-    margin-top:15px ;
+    margin-top: 15px;
 }
-
