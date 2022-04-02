@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul, menu{
+ol, ul, menu {
 	list-style: none;
 }
 blockquote, q {
@@ -49,14 +49,25 @@ table {
 
 * {
 	box-sizing: border-box;
+	font-family: inherit;
+	color: inherit;
 }
 
 a {
 	text-decoration: none;
-	color:inherit;
 }
 
-button {
-	border: none;
+input[type=number] {
+	appearance: textfield;
+}
+
+button{
 	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+input {
+	outline: none;
+	border: none;
 }

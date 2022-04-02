@@ -1,0 +1,859 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import './theme';
+@import './utility';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: $text-color;
+}
+
+
+// _________________________HEADER START_____________________________
+
+.header {
+    @include flex-layout(space-between, center);
+    padding: 26px 18px;
+
+}
+
+
+.header__navigation {
+    @include flex-layout(flex-start, center);
+
+
+    .header__navigation-menu {
+        position: relative;
+        order: 0;
+    }
+}
+
+.header__burger-menu {
+    width: 32px;
+    height: 32px;
+    margin-left: 48px;
+    cursor: pointer;
+}
+
+
+.header__navigation-link {
+
+    font-size: 13px;
+    color: $text-color;
+    font-weight: 400;
+    margin: 17px;
+
+    // &:last-of-type {
+    //     margin-right: 83px;
+    // }
+}
+
+
+
+
+
+
+
+.header__getting-started-wrapper {
+    display: none;
+
+    .header__navigation-link {
+        font-size: 13px;
+        font-weight: 400;
+        color: $text-color;
+        margin-right: 22px;
+    }
+
+    .header__button {
+        border-radius: 5px;
+        background: $primary;
+        font-size: 13px;
+        font-weight: 400;
+        padding: 13px 24px 15px
+    }
+}
+
+@media (min-width: 500px) {
+    .header__getting-started-wrapper {
+        display: block;
+    }
+}
+
+
+@media (max-width:$desktop) {
+
+    .header__navigation-links {
+        display: none;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+
+    }
+
+    &:focus,
+    &:focus-within {
+        .header__navigation-links {
+            @include flex-layout;
+            flex-direction: column;
+
+            a:hover {
+                border-bottom: 2px 2px 2px solid black;
+            }
+        }
+    }
+}
+
+@media (min-width: $desktop) {
+    .header__burger-menu {
+        display: none;
+    }
+
+    .header__navigation-links a:last-of-type {
+        margin-right: 83px;
+    }
+
+}
+
+
+// _________________________HEADER END______________________________
+
+
+// _________________________SEARCH START____________________________
+
+
+.search {
+    position: relative;
+    padding: 0 18px;
+}
+
+.search__container {
+
+    h2 {
+        // font-size: 62px;
+        // line-height: 78px;
+        font-size: 32px;
+        letter-spacing: -2px;
+        line-height: 1.3;
+        font-weight: 600;
+        color: $text-color;
+        max-width: 90%;
+        position: absolute;
+        margin: 24px auto 24px 0;
+
+    }
+
+    .search__input-wrapper {
+        @include flex-layout(flex-start, center);
+        border-radius: 5px;
+        position: absolute;
+        left: 5%;
+        transform: translateX(0%);
+        top: 50%;
+        transform: translateY(-50%);
+
+        img {
+            // padding:28px 13px 28px 28px ;
+            left: 14px;
+            position: absolute;
+
+        }
+
+        input {
+            // padding: 28px 30px 32px 0;
+            padding: 18px 20px 20px 45px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            font-size: 15px;
+            font-weight: 400;
+            color: $tertiary;
+
+        }
+
+        button {
+            // padding: 28px 34px 32px;
+            padding: 18px 26px 20px;
+            font-size: 15px;
+            color: $text-color;
+            background-color: $primary;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            font-weight: 500;
+        }
+    }
+}
+
+
+.search__blue-box {
+    @include flex-layout(center, center);
+    align-items: flex-end;
+    width: 90%;
+    background: $secondary;
+    height: 330px;
+    margin-left: 5%;
+
+    .search__contacts {
+        @include flex-layout(center, flex-start);
+        flex-direction: column;
+        padding: 12px 24px 0;
+        // height: 80px;
+        background: $primary;
+        width: 100%;
+
+        .search__contact {
+            margin-bottom: 16px;
+
+            img {
+                margin-right: 15px;
+
+            }
+
+
+            span {
+                font-size: 18px;
+                letter-spacing: 0;
+                color: $text-color;
+                font-weight: 600;
+            }
+        }
+
+    }
+}
+
+.search__scroll-down {
+    @include flex-layout(flex-start, center);
+    flex-direction: column;
+    position: absolute;
+    left: -15px;
+    bottom: -20px;
+
+    div {
+        font-size: 12px;
+        letter-spacing: 0px;
+        color: $tertiary;
+        font-weight: 500;
+        transform: rotate(-90deg);
+    }
+
+    img {
+        color: $tertiary;
+        margin-top: 50px;
+
+    }
+}
+
+
+
+@media (min-width: 450px) {
+    .search__container {
+        h2 {
+            width: 320px;
+            position: absolute;
+            top: 10%;
+            font-size: 35px;
+        }
+    }
+
+    .search__blue-box {
+        height: 430px;
+    }
+}
+
+@media (min-width: $tablet) {
+    .search__container {
+        h2 {
+            position: absolute;
+            top: 130px;
+            width: 680px;
+            font-size: 62px;
+            line-height: 78px;
+
+
+        }
+
+        .search__input-wrapper {
+            margin-top: 86px;
+
+            img {
+                position: absolute;
+                left: 20px;
+            }
+
+            input {
+                padding: 28px 30px 32px 58px;
+
+            }
+
+            button {
+                padding: 28px 34px 32px;
+
+            }
+        }
+    }
+
+    .search__blue-box {
+
+        height: 630px;
+        width: 82%;
+        margin-left: 18%;
+
+        .search__contacts {
+            flex-direction: row;
+            width: auto;
+            padding: 27px 58px 26px;
+            position: absolute;
+            right: 18px;
+
+
+            .search__contact {
+                margin-bottom: 0;
+                @include flex-layout(flex-end, flex-end);
+
+                img {
+                    margin-right: 32px;
+
+                }
+
+
+            }
+
+            .search__contact:first-of-type {
+                margin-right: 63px;
+            }
+        }
+    }
+
+    .search__scroll-down {
+
+        left: 5%;
+        bottom: 0;
+    }
+
+}
+
+// _____________________________SEARCH END______________________________
+
+
+// _____________________________ABOUT START_____________________________
+
+
+.about {
+    // padding: 144px 18px 78px;
+
+    // @include flex-layout(flex-start, center);
+    padding: 80px 18px 78px;
+}
+
+.about__description {
+
+    h2 {
+        font-size: 40px;
+        letter-spacing: -1px;
+        line-height: 50px;
+        color: $text-color;
+        font-weight: 600;
+        margin-bottom: 40px;
+        // margin-bottom: 69px;
+    }
+
+    p {
+        font-size: 13px;
+        letter-spacing: 0px;
+        line-height: 30px;
+        color: $text-color;
+        font-weight: 400;
+
+        &:last-of-type {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+}
+
+.about__milestones {
+    padding-top: 16px;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(2, 150px);
+    justify-content: center;
+
+    .about__milestone {
+        background-color: $background;
+        @include flex-layout;
+        flex-direction: column;
+        padding: 28px 0 30px;
+
+
+        div {
+            font-size: 40px;
+            letter-spacing: -1px;
+            line-height: 50px;
+            color: $primary;
+            font-weight: 600;
+
+        }
+
+        span {
+            font-size: 14px;
+            letter-spacing: 0px;
+            line-height: 50px;
+            color: $text-color;
+            font-weight: 600;
+        }
+    }
+}
+
+@media (min-width: $tablet) {
+    .about {
+        padding: 144px 18px 96px;
+
+
+
+        .about__description {
+            margin-left: 8%;
+            margin-right: 50px;
+
+            h2 {
+                margin-bottom: 62px;
+
+
+            }
+
+            p {
+                width: 100%;
+            }
+        }
+    }
+
+    .about__milestones {
+        justify-content: center;
+
+        grid-gap: 28px;
+        grid-template-columns: repeat(2, 200px);
+
+        .about__milestone {
+            padding: 30px;
+
+        }
+    }
+}
+
+@media (min-width: $desktop) {
+    .about {
+        @include flex-layout(space-between, center);
+
+        .about__description {
+
+
+            p {
+                width: 100%;
+            }
+        }
+    }
+
+    .about__milestones {
+        padding-top: 0;
+        grid-gap: 28px;
+        grid-template-columns: repeat(2, 200px);
+
+        .about__milestone {
+            padding: 30px
+        }
+    }
+}
+
+
+// ___________________________ABOUT END_____________________________
+
+.appartment {
+    padding: 0 18px;
+    background-color: $background;
+    position: relative;
+
+    .appartment__header {
+        h2 {
+            margin: 20px 20px 50px;
+            font-size: 30px;
+            letter-spacing: -1px;
+            line-height: 50px;
+            color: $text-color;
+            font-weight: 600;
+            // font-size: 40px;
+            // line-height: 50px;
+        }
+    }
+}
+
+.appartment__photos {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-rows: repeat(6, 450px);
+    padding-bottom: 20px;
+
+    .appartment__photo1 {
+        position: relative;
+        background: url(https://q-xx.bstatic.com/xdata/images/hotel/840x460/87616830.jpg?k=d3190f350292713118958a4cbf9d82d44222d6cd6db03014bb248d904c623946&o=);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+
+
+        .appartment__description {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: $white;
+
+
+            h4 {
+                margin-left: 20px;
+                padding-top: 26px;
+                font-size: 15px;
+                letter-spacing: 0px;
+                color: $text-color;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+
+
+            .appartment__beds {
+                @include flex-layout(space-between, flex-end);
+                margin-left: 22px;
+
+                div {
+                    @include flex-layout(flex-end, center);
+                    margin-right: 20px;
+                    margin-bottom: 10px;
+
+                    img {
+                        width: 10px;
+                        height: 10px;
+                    }
+
+                    small {
+                        font-size: 13px;
+                        letter-spacing: 0px;
+                        line-height: 50px;
+                        color: $tertiary;
+                        font-weight: 400;
+
+                    }
+                }
+
+                span {
+                    margin-bottom: 10px;
+                    font-size: 18px;
+                    letter-spacing: 0px;
+                    line-height: 50px;
+                    color: $primary;
+                    font-weight: 600;
+
+                }
+            }
+
+        }
+    }
+}
+
+
+.appartment__photo2 {
+    position: relative;
+    background: url(https://exceedrental.com/images/Appartement_3/app3-p-living-room-large.jpg);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    .appartment__description {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: $white;
+
+
+        h4 {
+            margin-left: 20px;
+            padding-top: 26px;
+            font-size: 15px;
+            letter-spacing: 0px;
+            color: $text-color;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+
+
+        .appartment__beds {
+            @include flex-layout(space-between, flex-end);
+            margin-left: 22px;
+
+            div {
+                @include flex-layout(flex-end, center);
+                margin-right: 20px;
+                margin-bottom: 10px;
+
+                img {
+                    width: 10px;
+                    height: 10px;
+                }
+
+                small {
+                    font-size: 13px;
+                    letter-spacing: 0px;
+                    line-height: 50px;
+                    color: $tertiary;
+                    font-weight: 400;
+
+                }
+            }
+
+            span {
+                margin-bottom: 10px;
+                font-size: 18px;
+                letter-spacing: 0px;
+                line-height: 50px;
+                color: $primary;
+                font-weight: 600;
+
+            }
+        }
+
+    }
+}
+
+.appartment__photo3 {
+    position: relative;
+    background: url(https://www.appartments-brandnertal.com/wp-content/uploads/wsi-imageoptim-Gartenappartement_de_Luxe_BY_MATTHIAS_RHOMBERG_013-900x450.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    .appartment__description {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: $white;
+
+
+        h4 {
+            margin-left: 20px;
+            padding-top: 26px;
+            font-size: 15px;
+            letter-spacing: 0px;
+            color: $text-color;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+
+
+        .appartment__beds {
+            @include flex-layout(space-between, flex-end);
+            margin-left: 22px;
+
+            div {
+                @include flex-layout(flex-end, center);
+                margin-right: 20px;
+                margin-bottom: 10px;
+
+                img {
+                    width: 10px;
+                    height: 10px;
+                }
+
+                small {
+                    font-size: 13px;
+                    letter-spacing: 0px;
+                    line-height: 50px;
+                    color: $tertiary;
+                    font-weight: 400;
+
+                }
+            }
+
+            span {
+                margin-bottom: 10px;
+                font-size: 18px;
+                letter-spacing: 0px;
+                line-height: 50px;
+                color: $primary;
+                font-weight: 600;
+
+            }
+        }
+
+    }
+}
+
+
+.appartment__container {
+    padding: 18px 18px 24px;
+
+    .appartment__input-wrapper {
+        @include flex-layout(flex-start, center);
+        border-radius: 5px;
+        margin-top: 0;
+        margin-left: -15px;
+
+
+        img {
+            // padding:28px 13px 28px 28px ;
+            padding-left: 10px;
+            position: absolute;
+
+
+        }
+
+        input {
+            // padding: 28px 30px 32px 0;
+            padding: 18px 10px 20px 45px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            font-size: 15px;
+            font-weight: 400;
+            color: $tertiary;
+
+        }
+
+        button {
+            // padding: 28px 34px 32px;
+            padding: 18px 20px 20px;
+            font-size: 15px;
+            color: $text-color;
+            background-color: $primary;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            font-weight: 500;
+        }
+    }
+}
+
+@media (min-width: $mobile) {
+    .appartment {
+        .appartment__container {
+            // padding: 45px 8%;
+            @include flex-layout;
+
+            .appartment__input-wrapper {}
+        }
+    }
+}
+
+
+@media (min-width: $tablet) {
+    .appartment {
+        .appartment__header {
+            h2 {
+                font-size: 30px;
+                line-height: 50px;
+                width: 50%;
+            }
+        }
+
+        .appartment__photos {
+            display: grid;
+            grid-gap: 50px;
+            grid-template-rows: repeat(3, 500px);
+            grid-template-columns: repeat(2, 350px);
+            justify-content: center;
+            padding: 15px;
+
+            .appartment__photo1 {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100%;
+            }
+
+            .appartment__photo2 {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100%;
+            }
+
+            .appartment__photo3 {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100%;
+
+            }
+        }
+
+        .appartment__container {
+            // padding: 45px 8%;
+            @include flex-layout;
+
+            .appartment__input-wrapper {
+
+
+                img {
+                    padding-left: 28px;
+                }
+
+                input {
+                    padding: 25px 58px;
+                }
+
+                button {
+                    padding: 25px 30px;
+                }
+
+            }
+        }
+    }
+}
+
+
+@media (min-width:1150px) {
+    .appartment {
+
+        .appartment__header {
+            h2 {
+                font-size: 40px;
+                line-height: 50px;
+                width: 50%;
+            }
+        }
+
+        .appartment__photos {
+            padding-bottom: 42px;
+            height: 100%;
+            display: grid;
+            grid-gap: 30px;
+            grid-template-rows: repeat(2, 500px);
+            grid-template-columns: repeat(3, 350px);
+            justify-content: center;
+        }
+    }
+
+    .appartment__container {
+        @include flex-layout;
+        justify-content: flex-start;
+
+        .appartment__input-wrapper {
+            position: absolute;
+            left: 14%;
+            // margin-left: 10%;
+            transform: translateX(-20%);
+
+            img {
+                padding-left: 28px;
+            }
+
+            input {
+                padding: 25px 58px;
+            }
+
+            button {
+                padding: 25px 30px;
+            }
+
+        }
+    }
+}
