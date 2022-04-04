@@ -97,6 +97,8 @@ body {
     border: 1px solid #1f373d;
     border-radius: 5px;
     background: white;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
   }
   :focus .header__navigation-links,
   :focus-within .header__navigation-links {
@@ -256,6 +258,10 @@ body {
   position: absolute;
   left: -15px;
   bottom: -20px;
+  -webkit-animation: 500ms slidein infinite alternate;
+          animation: 500ms slidein infinite alternate;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .search__scroll-down div {
@@ -270,6 +276,24 @@ body {
 .search__scroll-down img {
   color: #919eb1;
   margin-top: 50px;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-bottom: 5%;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-bottom: 5%;
+  }
+  to {
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 450px) {
