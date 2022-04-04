@@ -90,6 +90,7 @@ body {
         right: 0;
         border: 1px solid $border-color;
         border-radius: $border-radius;
+        background: white;
 
     }
 
@@ -98,10 +99,7 @@ body {
         .header__navigation-links {
             @include flex-layout;
             flex-direction: column;
-
-            a:hover {
-                border-bottom: 2px 2px 2px solid black;
-            }
+            z-index: 1;
         }
     }
 }

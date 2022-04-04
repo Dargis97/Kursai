@@ -96,6 +96,7 @@ body {
     right: 0;
     border: 1px solid #1f373d;
     border-radius: 5px;
+    background: white;
   }
   :focus .header__navigation-links,
   :focus-within .header__navigation-links {
@@ -112,10 +113,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  :focus .header__navigation-links a:hover,
-  :focus-within .header__navigation-links a:hover {
-    border-bottom: 2px 2px 2px solid black;
+    z-index: 1;
   }
 }
 
